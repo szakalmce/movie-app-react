@@ -6,7 +6,7 @@ const Header = () => {
       <header className="header">
         <div className="container">
           <div className="header-inner flex space-between align-center">
-            <h1 className="header-logo">LOGO</h1>
+            <h1 className="header-logo">TomaszGarbarz</h1>
             <ul className="nav flex">
               <li className="nav-item">
                 <a className="nav-link" href="/">
@@ -15,12 +15,12 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/">
-                  Home
+                  Projects
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Home
+                <a className="nav-link custom-button" href="/">
+                  Contact
                 </a>
               </li>
             </ul>

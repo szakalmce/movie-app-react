@@ -48,6 +48,7 @@
   --ptb-2: 2rem 0;
   --ptb-1: 1rem 0;
   --pr-1: 1rem;
+  --p-0-5: 0.5rem;
 }
 
 /*==================== BASE ====================*/
@@ -126,6 +127,14 @@ img {
   background-color: blue;
 }
 
+/*=== Buttons ===*/
+
+.custom-button {
+  background-color: var(--third-color);
+  padding: var(--p-0-5);
+  border-radius: 10px;
+}
+
 /*=== Header ===*/
 
 .header {
@@ -151,6 +160,8 @@ img {
 .nav-link {
   color: var(--background-color);
 }
+
+/*=== Footer ===*/
 
 .footer {
   background-color: var(--text-color);
