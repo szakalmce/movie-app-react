@@ -41,6 +41,8 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
+  --mt-3: 3rem;
+
   --mr-1: 1rem;
 
   /*=== Paddings ===*/
@@ -167,6 +169,10 @@ img {
   color: var(--background-color);
 }
 
+.nav-link.active {
+  text-decoration: underline;
+}
+
 @media (max-width: 669px) {
   .header {
     padding: var(--ptb-1);
@@ -221,4 +227,45 @@ img {
 .sub-footer-text {
   color: var(--background-color);
   font-weight: 300;
+}
+
+/*=== Contact ===*/
+
+.contact {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: var(--mt-3);
+  text-align: center;
+}
+
+.input,
+.textarea {
+  padding: var(--pr-1);
+  margin: 0;
+  color: var(--text-color);
+  border: 2px solid var(--second-color);
+  width: 100%;
+  margin-bottom: var(--mb-1);
+  font-size: var(--normal-font-size);
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--text-color);
+  outline: none;
+}
+
+.contact-button {
+  width: 100%;
+  padding: var(--pr-1);
+  background-color: var(--third-color);
+  border: none;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  color: var(--background-color);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  cursor: pointer;
 }
