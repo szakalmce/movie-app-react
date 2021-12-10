@@ -5,7 +5,7 @@ const Header = () => {
     <div>
       <header className="header">
         <div className="container">
-          <div className="header-inner flex space-between align-center">
+          <div className="header-inner ">
             <h1 className="header-logo">TomaszGarbarz</h1>
             <ul className="nav flex">
               <li className="nav-item">

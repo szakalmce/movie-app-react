@@ -137,6 +137,12 @@ img {
 
 /*=== Header ===*/
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header {
   background-color: var(--text-color);
   color: var(--background-color);
@@ -159,6 +165,32 @@ img {
 
 .nav-link {
   color: var(--background-color);
+}
+
+@media (max-width: 669px) {
+  .header {
+    padding: var(--ptb-1);
+  }
+
+  .header-inner {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    padding: var(--ptb-1);
+  }
+
+  .nav {
+    padding: var(--ptb-1);
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-right: 0;
+  }
+
+  .nav .nav-item {
+    margin-right: 0;
+  }
 }
 
 /*=== Footer ===*/
