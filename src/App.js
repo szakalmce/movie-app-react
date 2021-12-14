@@ -2,7 +2,9 @@ import Layout from "./Layout";
 import "./styles.css";
 import { Routes, Route } from "react-router-dom";
 import Contact from "./Contact";
-import Home from "./Home";
+import Movies from "./appPages/Movies";
+import Search from "./appPages/Search";
+import Series from "./appPages/Series";
 
 export default function App() {
   return (
@@ -10,8 +12,10 @@ export default function App() {
       <Layout>
         <div>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route exact path="/" element={<Movies />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/series" element={<Series />} />
           </Routes>
         </div>
       </Layout>

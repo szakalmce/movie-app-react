@@ -1,4 +1,5 @@
 import react from "react";
+import AppBottomNavbar from "./components/organisms/AppBottomNavbar";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
     <div className="layout">
       <Header />
       {children}
+      <AppBottomNavbar />
       <Footer />
     </div>
   );

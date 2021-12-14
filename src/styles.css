@@ -122,11 +122,10 @@ img {
 
 .layout {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   min-height: 100vh;
-}
-
-.content {
-  background-color: blue;
 }
 
 /*=== Buttons ===*/
@@ -143,6 +142,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
 }
 
 .header {
@@ -203,10 +203,7 @@ img {
 
 .footer {
   background-color: var(--text-color);
-
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
@@ -269,3 +266,66 @@ img {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/*==================== CUSTOM STYLES ====================*/
+
+.container {
+  width: 80%;
+
+  position: relative;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
+/*=== Navbar ===*/
+
+.app-navbar-wrapper {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-navbar-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-navbar-li {
+  margin: 0 1.5rem;
+}
+
+.app-navbar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-color);
+}
+
+.app-navbar-link.active {
+  color: var(--first-color);
+}
+
+.app-navbar-icon {
+  font-size: 3rem;
+}
+
+/*=== Bottom Navbar ===*/
+
+.app-navbar-bottom {
+  position: sticky;
+  bottom: 0;
+  margin-top: auto;
+  background-color: red;
+}
+
+/*=== Movies ===*/
