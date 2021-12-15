@@ -4,8 +4,6 @@ import { BsGithub, BsInstagram, BsFacebook } from "react-icons/bs";
 const Footer = () => {
   const date = new Date().getFullYear();
 
-  console.log(date);
-
   return (
     <div className="footer">
       <div className="footer-inner">

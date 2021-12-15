@@ -1,9 +1,12 @@
 import React from "react";
+import MovieCard from "../molecules/MovieCard";
 
-const MoviesList = () => {
+const MoviesList = ({ name }) => {
   return (
-    <div>
-      <h1>MoviesList</h1>
+    <div className="movie-list-wrapper">
+      {name.map((item) => {
+        return <MovieCard key={item.id} {...item} />;
+      })}
     </div>
   );
 };
