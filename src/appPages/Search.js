@@ -4,7 +4,6 @@ import Input from "../components/atoms/Input";
 import AppLayout from "../components/organisms/AppLayout";
 import MoviesList from "../components/organisms/MoviesList";
 import { appContext } from "../context/context";
-import axios from "axios";
 
 const Search = () => {
   const context = useContext(appContext);
@@ -19,7 +18,7 @@ const Search = () => {
   };
 
   return (
-    <AppLayout>
+    <AppLayout activePagination={search.length === 20 ? true : false}>
       <div className="container">
         <div className="movies-wrapper">
           <form onSubmit={handlerForm} className="search-form">

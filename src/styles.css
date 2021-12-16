@@ -96,6 +96,14 @@ img {
   max-width: 100%;
 }
 
+.primary {
+  background-color: var(--first-color);
+}
+
+.secondary {
+  background-color: var(--third-color);
+}
+
 /*==================== CUSTOM CSS ====================*/
 
 /*=== Containers ===*/
@@ -310,6 +318,13 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--background-color);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.app-navbar-p {
+  font-size: 1.25rem;
 }
 
 .app-navbar-link.active {
@@ -331,6 +346,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 /*=== Movie List ===*/
@@ -348,6 +364,14 @@ img {
 
 .single-movie-wrapper {
   position: relative;
+  background-color: #ddd;
+  display: block;
+  height: 100%;
+}
+
+.single-movie-wrapper:hover .single-movie-overflow {
+  opacity: 1;
+  visibility: visible;
 }
 
 .single-movie-title {
@@ -361,6 +385,16 @@ img {
   color: var(--background-color);
 }
 
+.single-movie-img {
+  display: block;
+  max-height: 250px;
+}
+
+.single-movie-no-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .single-movie-rate {
   position: absolute;
   bottom: 25px;
@@ -368,6 +402,34 @@ img {
   background-color: var(--third-color);
   padding: 0.25rem 0.5rem;
   color: var(--background-color);
+}
+
+.single-movie-overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.single-movie-button {
+  padding: 1.25rem 1.75rem;
+  border: none;
+  margin-right: 2rem;
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: var(--second-color);
 }
 
 /*=== Search Card ===*/
@@ -400,5 +462,91 @@ img {
   font-weight: var(--font-medium);
   font-size: var(--h3-font-size);
   border-radius: 5px;
+  cursor: pointer;
+}
+
+/*=== Pagination ===*/
+
+.pagination-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--third-color);
+}
+
+.pagination-icon {
+  font-size: 1.5rem;
+}
+
+.pagination-value {
+  font-size: 1.5rem;
+  margin: 0 1.5rem;
+}
+
+/*=== Movie Details ===*/
+
+.details-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
+}
+
+.details-image {
+  text-align: center;
+  display: block;
+}
+
+.details-image img {
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.details-title,
+.details-info {
+  margin-bottom: 1rem;
+}
+
+.details-numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-numbers-value {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.details-numbers-value p {
+  margin-left: 0.5rem;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+.detail-numbers-value-icon {
+  font-size: 1.5rem;
+}
+
+.details-buttons {
+  display: flex;
+}
+
+.details-single-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  margin-right: 2rem;
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  color: var(--background-color);
   cursor: pointer;
 }

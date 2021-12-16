@@ -7,22 +7,24 @@ import MoviesList from "../components/organisms/MoviesList";
 const Series = () => {
   const context = useContext(appContext);
 
-  const { setSeries, series, showMovies } = context;
+  const { setSeries, series, page } = context;
 
   const getMovies = () => {
     const api = process.env.REACT_APP_API_KEY;
     axios
       .get(
-        `https://api.themoviedb.org/3/tv/popular?api_key=${api}&language=en-US&page=1`
+        `https://api.themoviedb.org/3/tv/popular?api_key=${api}&language=en-US&page=${page}`
       )
       .then((res) => {
         setSeries(res.data.results);
+        console.log(res.data.results);
       });
   };
 
   useEffect(() => {
     getMovies();
-  }, []);
+    window.scrollTo(0, 0);
+  }, [page]);
 
   return (
     <AppLayout>

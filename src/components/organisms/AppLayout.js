@@ -1,8 +1,9 @@
 import React from "react";
+import Pagination from "../molecules/Pagination";
 import AppBottomNavbar from "./AppBottomNavbar";
 import AppNavbar from "./AppNavbar";
 
-const AppLayout = ({ children }) => {
+const AppLayout = ({ children, activePagination = true }) => {
   return (
     <div className="app-layout">
       <div>
@@ -15,8 +16,11 @@ const AppLayout = ({ children }) => {
       </div>
       <AppNavbar />
       {children}
+      {activePagination ? <Pagination /> : null}
     </div>
   );
 };
 
 export default AppLayout;
+
+//

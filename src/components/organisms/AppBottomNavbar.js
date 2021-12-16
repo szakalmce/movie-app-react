@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdMovieFilter, MdList } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { appContext } from "../../context/context";
 
 const AppBottomNavbar = () => {
+  const context = useContext(appContext);
+
   return (
     <div className="app-navbar-bottom">
       <ul className="app-navbar-ul">

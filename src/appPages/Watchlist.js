@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppLayout from "../components/organisms/AppLayout";
+import MoviesList from "../components/organisms/MoviesList";
+import { appContext } from "../context/context";
 
 const Watchlist = () => {
+  const context = useContext(appContext);
+
+  const { watchlist } = context;
+
   return (
-    <AppLayout>
+    <AppLayout activePagination={watchlist.length === 20 ? true : false}>
       <div className="container">
-        <h1>Watchlist</h1>
+        <div className="movies-wrapper">
+          <MoviesList name={watchlist} value="movies" />
+        </div>
       </div>
     </AppLayout>
   );
